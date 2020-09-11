@@ -53,7 +53,7 @@ public class ResutltadosActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
                 try {
-                    Intent perfil = new Intent(this, PerfilActivity.class);
+                    Intent perfil = new Intent(listview.getContext(), PerfilActivity.class);
                     perfil.putExtra("id", heroesId.get(position));
                     startActivity(perfil);
                 }catch (Exception e){
@@ -105,7 +105,6 @@ public class ResutltadosActivity extends AppCompatActivity {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-
 
         /*try {
 
