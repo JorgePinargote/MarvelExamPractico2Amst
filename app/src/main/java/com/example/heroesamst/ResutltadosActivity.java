@@ -52,7 +52,6 @@ public class ResutltadosActivity extends AppCompatActivity {
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-                if(criterio.isEmpty()) criterio = "all";
                 try {
                     Intent perfil = new Intent(this, PerfilActivity.class);
                     perfil.putExtra("id", heroesId.get(position));
